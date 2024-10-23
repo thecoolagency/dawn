@@ -44,6 +44,54 @@
     %}
 
     {% style %}
+
+      /* CentraNo1 Book */
+      @font-face {
+        font-family: 'CentraNo1-Book';
+        src: url('{{ "CentraNo1-Book-wVKafSsl.woff2" | asset_url }}') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      /* CentraNo1 Bold */
+      @font-face {
+        font-family: 'CentraNo1-Bold';
+        src: url('{{ "CentraNo1-Bold-s1ciVCDx.woff2" | asset_url }}') format('woff2');
+        font-weight: bold;
+        font-style: normal;
+      }
+
+      /* TSTARPRO Headline */
+      @font-face {
+        font-family: 'TSTARPRO-Headline';
+        src: url('{{ "TSTARPRO-Headline-CJhvJIZM.woff2" | asset_url }}') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      /* T-Star Heavy */
+      @font-face {
+        font-family: 'T-Star-Heavy';
+        src: url('{{ "T-Star-Heavy-r0-ZciLu.woff2" | asset_url }}') format('woff2');
+        font-weight: bold;
+        font-style: normal;
+      }
+
+      .CentralBook {
+        font-family: 'CentraNo1-Book', sans-serif;
+      }
+
+      .TStarHeadline {
+        font-family: 'TSTARPRO-Headline', sans-serif;
+      }
+
+      .TStarHeavy {
+        font-family: 'T-Star-Heavy', sans-serif;
+      }
+
+      .TStarBold {
+        font-family: 'TSTAR-Bold', sans-serif;
+      }
       {{ settings.type_body_font | font_face: font_display: 'swap' }}
       {{ body_font_bold | font_face: font_display: 'swap' }}
       {{ body_font_italic | font_face: font_display: 'swap' }}
@@ -96,12 +144,12 @@
       }
 
       :root {
-        --font-body-family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
+        --font-body-family: 'CentraNo1-Book', {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
         --font-body-style: {{ settings.type_body_font.style }};
         --font-body-weight: {{ settings.type_body_font.weight }};
         --font-body-weight-bold: {{ settings.type_body_font.weight | plus: 300 | at_most: 1000 }};
 
-        --font-heading-family: {{ settings.type_header_font.family }}, {{ settings.type_header_font.fallback_families }};
+        --font-heading-family: 'CentraNo1-Book', {{ settings.type_header_font.family }}, {{ settings.type_header_font.fallback_families }};
         --font-heading-style: {{ settings.type_header_font.style }};
         --font-heading-weight: {{ settings.type_header_font.weight }};
 
@@ -237,7 +285,6 @@
         min-height: 100%;
         margin: 0;
         font-size: 1.5rem;
-        letter-spacing: 0.06rem;
         line-height: calc(1 + 0.8 / var(--font-body-scale));
         font-family: var(--font-body-family);
         font-style: var(--font-body-style);

@@ -1,11 +1,22 @@
 [
   {
     "name": "theme_info",
-    "theme_name": "Dawn",
-    "theme_version": "12.0.0",
-    "theme_author": "Shopify",
-    "theme_documentation_url": "https://help.shopify.com/manual/online-store/themes",
-    "theme_support_url": "https://support.shopify.com/"
+    "theme_name": "Garden of Putain",
+    "theme_version": "1.0.0",
+    "theme_author": "Jonah Madeya",
+    "theme_documentation_url": "https://github.com/thecoolagency/c848f5-2-shopify#readme",
+    "theme_support_url": "https://github.com/thecoolagency/c848f5-2-shopify/issues"
+  },
+  {
+    "name": "Custom",
+    "settings": [
+      {
+        "type": "text",
+        "id": "site_name",
+        "label": "Site Name",
+        "default": "Garden Of Putain"
+      }
+    ]
   },
   {
     "name": "t:settings_schema.logo.name",

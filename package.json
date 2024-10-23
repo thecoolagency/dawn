@@ -1,0 +1,53 @@
+{
+  "name": "c848f5-2-shopify",
+  "version": "1.0.0",
+  "description": "[![Build status](https://github.com/shopify/dawn/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/Shopify/dawn/actions/workflows/ci.yml?query=branch%3Amain) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?color=informational)](/.github/CONTRIBUTING.md)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
+
+{
+  "name": "c848f5-2-shopify",
+  "version": "1.0.0",
+  "description": "Garden Of Putain by Jonah",
+  "scripts": {
+    "test": "shopify theme check",
+    "prettier": "prettier",
+    "login": "shopify auth logout; shopify theme list --store=$npm_package_config_store",
+    "dev": "shopify theme dev --store=$npm_package_config_store",
+    "dev:net": "shopify theme dev --host \"$(ipconfig getifaddr en0)\" --port 9191 --store=$npm_package_config_store",
+    "dev:sync": "shopify theme dev --theme-editor-sync --store=$npm_package_config_store",
+    "format": "prettier --write '**/*.liquid'",
+    "check": "shopify theme check",
+    "check:fix": "shopify theme check --auto-correct"
+  },
+  "config": {
+    "store": "c848f5-2.myshopify.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thecoolagency/c848f5-2-shopify.git"
+  },
+  "author": "Jonah Madeya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thecoolagency/c848f5-2-shopify/issues"
+  },
+  "homepage": "https://github.com/thecoolagency/c848f5-2-shopify#readme",
+  "devDependencies": {
+    "@shopify/prettier-plugin-liquid": "^1.5.0",
+    "eslint": "^9.3.0",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.2.5"
+  },
+  "browserslist": [
+    ">0.25%",
+    "not ie 11",
+    "not op_mini all"
+  ]
+}
